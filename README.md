@@ -1,4 +1,4 @@
-# NttProject
+# RSAProject
 細節說明:
 
 1. BOM表要有表頭和表身2張table
