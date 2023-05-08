@@ -9,7 +9,11 @@ namespace RsaProject.Controllers
     [ApiController]
     public class RSAController : ControllerBase
     {
-        public RsaEncryption rsa=new RsaEncryption();
+        private RsaEncryption rsa;
+        public RSAController()
+        {
+            rsa = RsaEncryption.Instance();
+        }
 
 
         // POST api/<RSAController>
