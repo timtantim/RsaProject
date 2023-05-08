@@ -18,11 +18,11 @@ namespace RsaProject.Controllers
 
         // POST api/<RSAController>
         [HttpPost]
-        public string Post(string filetype)
+        public string Post(string value)
         {
             string jsonData = string.Empty;
             string cypher = string.Empty;
-            switch (filetype) {
+            switch (value) {
                 case "ExcelFile01":
                     jsonData = "asfasfasflsdjfkldsjgklsd";
                     break;
