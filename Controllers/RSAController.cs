@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using RsaProject.Model;
 using RsaProject.RsaService;
-
+using Syncfusion.XlsIO;
+using System;
+using System.IO;
 namespace RsaProject.Controllers
 {
     [Route("api/[controller]")]
@@ -32,6 +34,25 @@ namespace RsaProject.Controllers
             }
             cypher = rsa.Encrypt(jsonData);
             return cypher;
+        }
+
+
+        // POST api/<RSAController>
+        [HttpPost("GenerateExcel")]
+        public bool GenerateExcel(string value)
+        {
+            using (ExcelEngine excelEngine = new ExcelEngine())
+            {
+                IApplication application = excelEngine.Excel;
+                application.DefaultVersion = ExcelVersion.Xlsx;
+                IWorkbook workbook = application.Workbooks.Create(1);
+                IWorksheet worksheet = workbook.Worksheets[0];
+                worksheet.Range["A1"].Value = "Hello World";
+                FileStream stream = new FileStream("LearnExcel.xlsx", FileMode.Create, FileAccess.ReadWrite);
+                workbook.SaveAs(stream);
+                stream.Dispose();
+            }
+            return true;
         }
     }
 }

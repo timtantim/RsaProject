@@ -38,6 +38,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.0",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.0",
           "Newtonsoft.Json": "13.0.3",
+          "Syncfusion.XlsIO.Net.Core": "21.2.4",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -704,6 +705,11 @@
           "System.Security.Principal.Windows": "4.5.0"
         }
       },
+      "NETStandard.Library/2.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0"
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -767,6 +773,47 @@
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
           }
+        }
+      },
+      "Syncfusion.Compression.Net.Core/21.2.4": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Compression.Portable.dll": {
+            "assemblyVersion": "21.2.4.0",
+            "fileVersion": "21.2.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Compression.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/21.2.4": {
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "21.2.4.0",
+            "fileVersion": "21.2.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.XlsIO.Net.Core/21.2.4": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "Syncfusion.Compression.Net.Core": "21.2.4",
+          "Syncfusion.Licensing": "21.2.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.XlsIO.Portable.dll": {
+            "assemblyVersion": "21.2.4.0",
+            "fileVersion": "21.2.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.XlsIO.Portable.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -3275,6 +3322,13 @@
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
     },
+    "NETStandard.Library/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+      "path": "netstandard.library/2.0.0",
+      "hashPath": "netstandard.library.2.0.0.nupkg.sha512"
+    },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",
       "serviceable": true,
@@ -3323,6 +3377,27 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "Syncfusion.Compression.Net.Core/21.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rvi3XB2hjSaQIFSNWVPBcRz8H+p7IScFUfcybFOkbGzi4ync1IzU+EM469xA+lr+UflnXNZwdYP5cJFDMyfPxw==",
+      "path": "syncfusion.compression.net.core/21.2.4",
+      "hashPath": "syncfusion.compression.net.core.21.2.4.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/21.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uUBW0vHMKqvegVcj5CouDE+rBuPp7mU0+xjNw9Niq+p9bt1KMFHC3pbSE9jZdydDv2a9fFFZzZCt5LU1vRbrrw==",
+      "path": "syncfusion.licensing/21.2.4",
+      "hashPath": "syncfusion.licensing.21.2.4.nupkg.sha512"
+    },
+    "Syncfusion.XlsIO.Net.Core/21.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k+Rfub91JKLlIyPQrWrDIQfgpSg9/rUwslothitQPw1rZqc0CEg70bGlTu8fjIEQ+yqdQFOHvGwFHeL3U4/TOA==",
+      "path": "syncfusion.xlsio.net.core/21.2.4",
+      "hashPath": "syncfusion.xlsio.net.core.21.2.4.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
