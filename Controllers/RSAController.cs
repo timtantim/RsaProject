@@ -4,6 +4,7 @@ using RsaProject.Model;
 using RsaProject.RsaService;
 using Syncfusion.XlsIO;
 using System;
+using System.Collections.Generic;
 using System.IO;
 namespace RsaProject.Controllers
 {
@@ -47,6 +48,29 @@ namespace RsaProject.Controllers
             var data = rsaHelper.Decrypt(encrypted);
             return data;
         }
+
+        [HttpPost("Signature")]
+        public object Signature(string originalData)
+        {
+
+            //cypher = rsa.Encrypt(jsonData);
+            var signature = rsaHelper.Signature(originalData);
+            var collection = new Dictionary<string, object>();
+            collection.Add("signature", signature);
+            collection.Add("data", originalData);
+            return collection;
+        }
+
+        [HttpPost("VerifySignature")]
+        public bool VerifySignature(string signature,string originalData)
+        {
+
+            //cypher = rsa.Encrypt(jsonData);
+            var data = rsaHelper.VerifySignature(originalData, signature);
+            return data;
+        }
+
+        
 
 
         // POST api/<RSAController>
