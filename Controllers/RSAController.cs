@@ -11,15 +11,17 @@ namespace RsaProject.Controllers
     [ApiController]
     public class RSAController : ControllerBase
     {
-        private RsaEncryption rsa;
+        //private RsaEncryption rsa;
+        private RsaHelper rsaHelper;
         public RSAController()
         {
-            rsa = RsaEncryption.Instance();
+            //rsa = RsaEncryption.Instance();
+            rsaHelper = RsaHelper.Instance();
         }
 
 
         // POST api/<RSAController>
-        [HttpPost]
+        [HttpPost("EncryptFile")]
         public string Post(string value)
         {
             string jsonData = string.Empty;
@@ -32,8 +34,18 @@ namespace RsaProject.Controllers
                     jsonData = "asfasfasflsdjfkldsjgkls123123123d";
                     break;
             }
-            cypher = rsa.Encrypt(jsonData);
+            //cypher = rsa.Encrypt(jsonData);
+            cypher = rsaHelper.Encrypt(jsonData);
             return cypher;
+        }
+
+        [HttpPost("DecryptFile")]
+        public string DecryptFile(string encrypted)
+        {
+            
+            //cypher = rsa.Encrypt(jsonData);
+            var data = rsaHelper.Decrypt(encrypted);
+            return data;
         }
 
 

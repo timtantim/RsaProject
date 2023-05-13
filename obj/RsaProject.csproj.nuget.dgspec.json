@@ -79,6 +79,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "Portable.BouncyCastle": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
             "Syncfusion.XlsIO.Net.Core": {
               "target": "Package",
               "version": "[21.2.4, )"
